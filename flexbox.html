@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Flexbox</title>
+<style>
+#main {
+  width: 600px;
+  display: -webkit-box;
+  display: box;
+  height: 100px;
+}
+˜
+#main > div {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  height: 100%;
+  border: 10px solid #888;
+  -webkit-transition-property: background, width;
+  -webkit-transition-duration: 0.8s, 1s;
+  -webkit-transition-timing-function: linear, ease-out;
+}
+
+#main > div:nth-child(1) {
+  background: red;
+  border-right: 0;
+}
+
+#main > div:nth-child(2) {
+  background: green;
+  border-right: 0;
+}
+
+#main > div:nth-child(3) {
+  background: black;
+}
+
+#main > div:hover {
+  width: 200px;
+  background: orange;
+}
+</style>
+</head>
+<body>
+  <div id="main">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
